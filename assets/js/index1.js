@@ -8,6 +8,60 @@ document.addEventListener('DOMContentLoaded', function () {
     http.open("GET", "https://mycloud.devazy.iotflows.com/getArrayData?data=0", true);
     http.send();
     chartTank();
+
+    $('body').addClass('dark-mode');
+
+    $('#myonoffswitch5').prop('checked', true);
+    $('#myonoffswitch8').prop('checked', true);
+    $('body').removeClass('light-mode');
+    $('body').removeClass('transparent-mode');
+
+    $('body')?.removeClass('color-menu');
+    $('body')?.removeClass('gradient-menu');
+    $('body')?.removeClass('light-menu');
+    $('body')?.removeClass('color-header');
+    $('body')?.removeClass('gradient-header');
+    $('body')?.removeClass('header-light');
+
+    // remove light theme properties
+    localStorage.removeItem('sashprimaryColor')
+    localStorage.removeItem('sashprimaryHoverColor')
+    localStorage.removeItem('sashprimaryBorderColor')
+    localStorage.removeItem('sashdarkPrimary')
+    document.querySelector('html').style.removeProperty('--primary-bg-color', localStorage.darkPrimary);
+    document.querySelector('html').style.removeProperty('--primary-bg-hover', localStorage.darkPrimary);
+    document.querySelector('html').style.removeProperty('--primary-bg-border', localStorage.darkPrimary);
+    document.querySelector('html').style.removeProperty('--dark-primary', localStorage.darkPrimary);
+
+    // removing light theme data 
+    localStorage.removeItem('sashprimaryColor')
+    localStorage.removeItem('sashprimaryHoverColor')
+    localStorage.removeItem('sashprimaryBorderColor')
+    localStorage.removeItem('sashprimaryTransparent');
+
+    $('#myonoffswitch1').prop('checked', false);
+    $('#myonoffswitch2').prop('checked', true);
+    $('#myonoffswitchTransparent').prop('checked', false);
+    //
+    checkOptions();
+
+    localStorage.removeItem('sashtransparentBgColor');
+    localStorage.removeItem('sashtransparentThemeColor');
+    localStorage.removeItem('sashtransparentPrimary');
+    localStorage.removeItem('sashtransparentBgImgPrimary');
+    localStorage.removeItem('sashtransparentBgImgprimaryTransparent');
+
+
+    localStorage.removeItem('sashcolormenu');
+    localStorage.removeItem('sashgradientmenu');
+    localStorage.removeItem('sashlightmenu');
+    localStorage.removeItem('sashcolorheader');
+    localStorage.removeItem('sashgradientheader');
+    localStorage.removeItem('sashlightheader');
+
+    const root = document.querySelector(':root');
+    root.style = "";
+    names()
 });
 
 // CHART LINE
