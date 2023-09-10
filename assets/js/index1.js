@@ -1,7 +1,7 @@
 // load awal
 document.addEventListener('DOMContentLoaded', function () {
     const sidebarToggle = document.querySelector('.app-sidebar__toggle');
-    if (sidebarToggle) {
+    if (sidebarToggle && window.innerWidth > 768) {
         sidebarToggle.click();
     }
     var http = new XMLHttpRequest();
