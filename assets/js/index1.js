@@ -197,10 +197,10 @@ var colorFuel = ["#40ff00"];
 var colorTemp = ["#ffd500"];
 var colorDens = ["#00eaff"];
 
-var chartFuel1 = createGauge('fuel1', 372, 850, colorFuel, "Liter");
-var chartFuel2 = createGauge('fuel2', 720, 850, colorFuel, "Liter");
-var chartFuel3 = createGauge('fuel3', 576, 850, colorFuel, "Liter");
-var chartFuel4 = createGauge('fuel4', 105, 850, colorFuel, "Liter");
+var chartFuel1 = createGauge('fuel1', 372, 850, colorFuel, "Satuan");
+var chartFuel2 = createGauge('fuel2', 720, 850, colorFuel, "Satuan");
+var chartFuel3 = createGauge('fuel3', 576, 850, colorFuel, "Satuan");
+var chartFuel4 = createGauge('fuel4', 105, 850, colorFuel, "Satuan");
 
 var chartTemp1 = createGauge('temp1', 27, 100, colorTemp, "Celcius");
 var chartTemp2 = createGauge('temp2', 38, 100, colorTemp, "Celcius");
