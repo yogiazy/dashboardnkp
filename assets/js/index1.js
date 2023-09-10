@@ -148,7 +148,7 @@ function chartTank() {
             updateChart(chartTank4, timeseries, data.tank4);
         }
     }
-    setTimeout(chartTank, 20000);
+    setTimeout(chartTank, 5000);
 };
 
 // button dropdown
