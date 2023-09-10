@@ -1,6 +1,7 @@
 // load awal
 document.addEventListener('DOMContentLoaded', function () {
     const sidebarToggle = document.querySelector('.app-sidebar__toggle');
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Ope/i.test(navigator.userAgent);
     if (sidebarToggle && window.innerWidth > 768) {
         sidebarToggle.click();
     }
