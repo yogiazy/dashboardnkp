@@ -160,6 +160,16 @@ function btn_sub(ID) {
             const selectedValue = item.getAttribute('data-value');
             http.open("GET", "https://mycloud.devazy.iotflows.com/getArrayData?data=" + selectedValue, true);
             http.send();
+            http.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(this.responseText);
+                    timeseries = data.time;
+                    updateChart(chartTank1, timeseries, data.tank1);
+                    updateChart(chartTank2, timeseries, data.tank2);
+                    updateChart(chartTank3, timeseries, data.tank3);
+                    updateChart(chartTank4, timeseries, data.tank4);
+                }
+            }
             document.getElementById(ID).textContent = selectedValue;
         });
     });
