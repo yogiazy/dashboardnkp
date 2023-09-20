@@ -10,7 +10,7 @@ window.onload = function () {
         document.getElementById('max').value = end1;
 
         var http = new XMLHttpRequest();
-        http.open("GET", "http://127.0.0.1:1884/getTabelFlowmeter?data=2&start=" + storedStartTime + "&end=" + storedEndTime, true);
+        http.open("GET", "https://mycloud.devazy.iotflows.com/getTabelFlowmeter?data=2&start=" + storedStartTime + "&end=" + storedEndTime, true);
         http.send();
 
         http.onreadystatechange = function () {
@@ -351,7 +351,7 @@ function updateFlow(chart, time, data, max) {
 
 function chartFlow() {
     var http = new XMLHttpRequest();
-    http.open("GET", "http://127.0.0.1:1884/chartFlowmeter?", true);
+    http.open("GET", "https://mycloud.devazy.iotflows.com/chartFlowmeter?", true);
     http.send();
 
     http.onreadystatechange = function () {
@@ -376,7 +376,7 @@ chartFlow();
 
 function addFlowData() {
     var http = new XMLHttpRequest();
-    http.open("GET", "http://127.0.0.1:1884/getDataFlow?", true);
+    http.open("GET", "https://mycloud.devazy.iotflows.com/getDataFlow?", true);
     http.send();
 
     http.onreadystatechange = function () {
@@ -416,7 +416,7 @@ function updateGantryStatus(gantryNumber, status) {
 
 function addFlowStatus() {
     var http = new XMLHttpRequest();
-    http.open("GET", "http://127.0.0.1:1884/getStatusGentry?", true);
+    http.open("GET", "https://mycloud.devazy.iotflows.com/getStatusGentry?", true);
     http.send();
 
     http.onreadystatechange = function () {

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebarToggle.click();
     }
     var http = new XMLHttpRequest();
-    http.open("GET", "http://127.0.0.1:1884/getArrayData?data=0", true);
+    http.open("GET", "https://mycloud.devazy.iotflows.com/getArrayData?data=0", true);
     http.send();
     chartTank();
 
@@ -138,7 +138,7 @@ function updateChart(chart, time, data, max) {
 
 function chartTank() {
     var http = new XMLHttpRequest();
-    http.open("GET", "http://127.0.0.1:1884/getArrayData?data=1", true);
+    http.open("GET", "https://mycloud.devazy.iotflows.com/getArrayData?data=1", true);
     http.send();
 
     http.onreadystatechange = function () {
@@ -161,7 +161,7 @@ function btn_sub(ID) {
     dropdownItems.forEach((item) => {
         item.addEventListener('click', () => {
             const selectedValue = item.getAttribute('data-value');
-            http.open("GET", "http://127.0.0.1:1884/getArrayData?data=" + selectedValue, true);
+            http.open("GET", "https://mycloud.devazy.iotflows.com/getArrayData?data=" + selectedValue, true);
             http.send();
             http.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
@@ -230,7 +230,7 @@ var dsg = ['DSG1', 'DSG2', 'DSG3', 'DSG4'];
 
 function start() {
     var http = new XMLHttpRequest();
-    http.open("GET", "http://127.0.0.1:1884/getCurrentData", true);
+    http.open("GET", "https://mycloud.devazy.iotflows.com/getCurrentData", true);
     http.send();
 
     http.onreadystatechange = function () {

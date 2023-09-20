@@ -10,7 +10,7 @@ window.onload = function () {
         document.getElementById('max').value = end1;
 
         var http = new XMLHttpRequest();
-        http.open("GET", "http://127.0.0.1:1884/getTabelData?data=2&start=" + storedStartTime + "&end=" + storedEndTime, true);
+        http.open("GET", "https://mycloud.devazy.iotflows.com/getTabelData?data=2&start=" + storedStartTime + "&end=" + storedEndTime, true);
         http.send();
 
         http.onreadystatechange = function () {
