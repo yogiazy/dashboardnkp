@@ -1,1 +1,1 @@
-# dashboardnkp
+Adaro's local dashboard features a web-based user interface. This UI facilitates the monitoring of flowmeter inputs and outputs, fuel tank levels, as well as temperature and density of the fuel, all utilizing LoRa technology.
