@@ -63062,7 +63062,7 @@ textarea.form-control {
 }
 
 .cup {
-    --myheigt: -175px; /*-70px - 175px*/ 
+    --myheigt: -120px; /*-70px - 175px*/ 
     position: absolute;
     top: 50%;
     left: 50px;
