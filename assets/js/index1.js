@@ -124,8 +124,8 @@ function createTankChart(id, data, maxY) {
 var timeseries = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
 var tank1Data = [14, 10, 7, 4, 10, 8, 11, 5, 11, 8, 5, 4, 8, 7, 0, 10, 5, 2, 14, 19, 9, 14, 5, 13];
 
-var chartTank1 = createTankChart('tank1', tank1Data, 1500000);
-var chartTank2 = createTankChart('tank2', tank1Data, 1500000);
+var chartTank1 = createTankChart('tank1', tank1Data, 700000);
+var chartTank2 = createTankChart('tank2', tank1Data, 700000);
 var chartTank3 = createTankChart('tank3', tank1Data, 600000);
 var chartTank4 = createTankChart('tank4', tank1Data, 600000);
 
